@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmetilyaz.com - Ana Sayfa</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        nav {
+            background-color: #e63946;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .navbar-logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: transform 0.3s ease;
+        }
+
+        .navbar-logo:hover {
+            transform: scale(1.05);
+        }
+
+        .navbar-links {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            position: relative;
+            padding: 5px 0;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: white;
+            transition: width 0.3s ease;
+        }
+
+        .navbar-links a:hover::after {
+            width: 100%;
+        }
+
+        .navbar-contact {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .navbar-contact a, .navbar-contact .phone {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 8px 15px;
+            border: 2px solid white;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-contact .phone {
+            background-color: white;
+            color: #e63946;
+        }
+
+        .navbar-contact a:hover {
+            background-color: white;
+            color: #e63946;
+            transform: translateY(-2px);
+        }
+
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3');
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-card h3 {
+            color: #e63946;
+            margin: 15px 0;
+        }
+
+        .service-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #e63946;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .cta-button:hover {
+            background-color: #c1121f;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background-color: #2b2d42;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo">ahmetilyaz.com</a>
+            <ul class="navbar-links">
+                <li><a href="kiralik-ev.html">Kiralık Ev</a></li>
+                <li><a href="kiralik-araba.html">Kiralık Araba</a></li>
+                <li><a href="satilik-ev.html">Satılık Ev</a></li>
+                <li><a href="satilik-araba.html">Satılık Araba</a></li>
+            </ul>
+            <div class="navbar-contact">
+                <span class="phone">📞 0707 502 76</span>
+                <a href="iletisim.html">İletişim</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>Hayalinizdeki Mülk Burada</h1>
+        <p>Kiralık ve satılık ev ve araba ilanları için doğru adrestesiniz</p>
+        <a href="#services" class="cta-button">Hizmetlerimizi Keşfedin</a>
+    </section>
+
+    <section id="services" class="services">
+        <div class="service-card">
+            <h3>Kiralık Ev</h3>
+            <p>Size uygun kiralık evleri keşfedin</p>
+            <a href="kiralik-ev.html" class="cta-button">İncele</a>
+        </div>
+        <div class="service-card">
+            <h3>Kiralık Araba</h3>
+            <p>Günlük ve aylık kiralık araç seçenekleri</p>
+            <a href="kiralik-araba.html" class="cta-button">İncele</a>
+        </div>
+        <div class="service-card">
+            <h3>Satılık Ev</h3>
+            <p>Hayalinizdeki evi bulun</p>
+            <a href="satilik-ev.html" class="cta-button">İncele</a>
+        </div>
+        <div class="service-card">
+            <h3>Satılık Araba</h3>
+            <p>İkinci el ve sıfır araç seçenekleri</p>
+            <a href="satilik-araba.html" class="cta-button">İncele</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Ahmetilyaz.com - Tüm hakları saklıdır.</p>
+    </footer>
+</body>
+</html> 
